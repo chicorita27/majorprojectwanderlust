@@ -101,8 +101,9 @@ app.use("/",userRouter)
 
 
 app.get("/", (req, res) => {
-    res.render("listings/index",{allListings});
+    res.send("Wanderlust Deployment Successful ✅");
 });
+
 
 
   
