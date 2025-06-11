@@ -100,9 +100,11 @@ app.use("/",userRouter)
 
 
 
-app.get("/", (req, res) => {
-    res.send("Wanderlust Deployment Successful ✅");
+app.get("/", async (req, res) => {
+    const allListings = await Listing.find({});
+    res.render("listings/index", { allListings });
 });
+
 
 
 
