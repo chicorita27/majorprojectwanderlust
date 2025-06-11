@@ -101,7 +101,7 @@ app.use("/",userRouter)
 
 
 app.get("/", (req, res) => {
-    res.render("listings/index");
+    res.render("listings/index",{allListings});
 });
 
 
